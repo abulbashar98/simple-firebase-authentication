@@ -19,9 +19,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 13. Copy FirebaseConfig from Project Settings, Pase it into a File firebase.init.js
 14. Export app which is initializing firebase Config from firebase.init.js file
 15. import initializing app in App.js
-16. Create auth variable in App.js and getAuth, send app a parameter of getAuth...
+16. Create auth variable in App.js outSide App component function, store getAuth, send app as a parameter of getAuth... e.g(const auth = getAuth(app))
 17. import {getAuth} from firebase/auth
-16. Go to Docs > build > authentication > web > get started  and Then go to Google sign in
-17. go to authentication on project home page > authentication > get started >  Enable Google authentication in it...
+18. Go to Docs > build > authentication > web > get started  and Then go to Google sign in
+19. go to authentication on project home page > authentication > get started > sign in method >  Enable Google authentication in it...
+20. Go to Build in docs > authentication  > google....
+21. import GoogleAuthProvider from and create provider variable in App.js App function using new GoogleAuthProvider..e.g(const provider = new GoogleAuthProvider)
+22. now onClick of a button Call signInWithPopup function and send auth and provider as parameters... e.g(signInWithPopup(auth, provider))... auth was created before using getAuth(app)....
+23. then using .then catch result and for now create a variable of user = result.user
+24. or using .cath catch error and console log error..
 
 
