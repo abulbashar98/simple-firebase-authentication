@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Steps to get started with firebase..
+## Steps to get started with firebase and sign in with popup using google provider..
 
 1. Go to firebase.google.com
 2. Got to Console
@@ -28,5 +28,31 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 22. now onClick of a button Call signInWithPopup function and send auth and provider as parameters... e.g(signInWithPopup(auth, provider))... auth was created before using getAuth(app)....
 23. then using .then catch result and for now create a variable of user = result.user
 24. or using .catch catch error and console.error error..
+
+
+
+
+### steps to use github provider with Popup....
+
+1. Go to Project HomePage > authentication > sign in method > add new provider > git hub
+2. Enable github
+3. Notice github provider giving Call back URL and demands Client Id and Client Secret..
+4. Go to your Github Account > settings > Developer settings > OAuth Apps > Register a new application
+5. U can access apps given permission to from settings > applications
+6. Inside Register new OAuth application provide name, for now give localHostURL in HomePage URL, provide project description,
+7. Copy the Call Back url from step 3 and provide in OAuth register
+8. Register Application
+9. Notice Client Id and Client Secret > generate a new client Secret
+10. Copy and Paste both in Firebase Github Authentication provider
+11. Notice Save button enabled in Provider
+12. Click and Notice github Provider enabled
+
+13. Now Go to docs > build > authentication > web > github
+14. create githubProvider variable using new GithubAuthProvider.. e.g(const githubProvider = new GithubProvider();)
+15. use this github provider to signInWithPopup on Click, 
+16. Solve Credential error, go to project home page in firebase > authentication > sign in Method > one account per email address > Change for now > allow multiple accounts with same email address
+
+
+
 
 
