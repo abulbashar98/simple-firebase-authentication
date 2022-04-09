@@ -27,6 +27,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 21. import GoogleAuthProvider from and create provider variable in App.js App function using new GoogleAuthProvider..e.g(const provider = new GoogleAuthProvider)
 22. now onClick of a button Call signInWithPopup function and send auth and provider as parameters... e.g(signInWithPopup(auth, provider))... auth was created before using getAuth(app)....
 23. then using .then catch result and for now create a variable of user = result.user
-24. or using .cath catch error and console log error..
+24. or using .catch catch error and console.error error..
 
 
